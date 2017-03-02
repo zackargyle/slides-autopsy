@@ -29,8 +29,6 @@ import theme from "./theme";
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
-// const CodeStyle = { minWidth: "60%", maxWidth: "60%", fontSize: "1rem", display: "inline-block", verticalAlign: "top" };
-
 /*
 [2] Bio + Overview
 [5] Story time
@@ -134,7 +132,9 @@ export default class Presentation extends React.Component {
 
           {/* Stages of an Autopsy */}
 
-          <Slide>
+          <Slide notes={`
+            Go watch the walking dead if you want descriptive
+          `}>
             <Heading size={1} fit lineHeight={1}>
                 Stages of an Autopsy
             </Heading>
@@ -210,11 +210,25 @@ export default class Presentation extends React.Component {
             <Image src={images.spongebob.ready.replace("/", "")} margin="5% 0" width="60%"/>
           </Slide>
 
-          <Slide>
+          <Slide notes={`
+            <ol>
+              <li>Search setState in /src, *-test.js</li>
+              <li>Notice buggy code in ReactUpdateQueue</li>
+              <li>Async for things like componentWillMount</li>
+              <li>_pendingStateQueue, _processPendingState, mountComponent/updateComponent</li>
+            </ol>
+          `}>
             <Image src={images.react.replace("/", "")} margin="5% 0" width="60%"/>
           </Slide>
 
-          <Slide>
+          <Slide notes={`
+            <ol>
+              <li>Tie back to amphtml</li>
+              <li>Imposter syndrome; it's intimidating, but you can do it</li>
+              <li>Playstation day 1, bug fix in an hour</li>
+              <li>Find an advocate to help you. Michelle story.</li>
+            </ol>
+          `}>
             <Heading size={1} fit lineHeight={1}>{'<Rant>'}</Heading>
           </Slide>
 
